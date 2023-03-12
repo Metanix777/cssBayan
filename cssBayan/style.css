@@ -1,10 +1,20 @@
+html {
+    font-size: 0.7rem;
+}
+
 .wrapper_mems {
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
 }
 
 .mem {
     border-bottom: 0.05rem solid rgb(131, 131, 131);
+}
+
+.mem_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .mem_text {
@@ -13,11 +23,27 @@
     margin: 0;
 }
 
+.mem_title img {
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.5s;
+}
+
+.mem:hover .mem_title img {
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+input:checked ~ .mem_title img {
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
 input[type="radio"] {
     display: none;
 }
 
-input:checked + .mem_content {
+input:checked ~ .mem_content {
     height: 20rem;
     transition: all 1s;
 }
@@ -35,6 +61,7 @@ input:checked + .mem_content {
 }
 
 .mem_img {
-    height: 18rem;
+    width: 100%;
+    object-fit: contain;
 }
 
