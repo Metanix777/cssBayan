@@ -1,0 +1,112 @@
+html {
+    font-size: 0.7rem;
+}
+
+header, .wrapper_mems {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    border-bottom: 0.2rem solid rgb(131, 131, 131);
+}
+
+.mem {
+    border-bottom: 0.05rem solid rgb(131, 131, 131);
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+.mem_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: #1e47fc;
+}
+
+.mem_text {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.mem_title img {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.5s;
+}
+
+.wrapper_mems:hover .mem_title {
+    color: #000;
+}
+
+.wrapper_mems:hover .mem_title img {
+    display: block;
+}
+
+.mem:hover .mem_title img {
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+input:checked ~ .mem_title {
+    color: #000;
+}
+
+input:checked ~ .mem_title img {
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input:checked ~ .mem_content {
+    color: #000;
+    height: 20rem;
+    transition: all 1s;
+}
+
+.mem_content {
+    display: flex;
+    justify-content: center;
+    height: 0rem;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.mem:hover .mem_content {
+    height: 20rem;
+}
+
+.mem_img {
+    width: 100%;
+    object-fit: contain;
+}
+
+@media screen and (min-width: 700px) {
+    html {
+        font-size: 1rem;
+    }
+
+    header, .wrapper_mems {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    html {
+        font-size: 1.2rem;
+    }
+
+    header, .wrapper_mems {
+        width: 60%;
+    }
+}
+
+
