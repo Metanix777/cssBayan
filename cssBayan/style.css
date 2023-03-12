@@ -1,0 +1,40 @@
+.wrapper_mems {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.mem {
+    border-bottom: 0.05rem solid rgb(131, 131, 131);
+}
+
+.mem_text {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input:checked + .mem_content {
+    height: 20rem;
+    transition: all 1s;
+}
+
+.mem_content {
+    display: flex;
+    justify-content: center;
+    height: 0rem;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.mem:hover .mem_content {
+    height: 20rem;
+}
+
+.mem_img {
+    height: 18rem;
+}
+
